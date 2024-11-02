@@ -1,0 +1,157 @@
+@import "../../../assets/style/settings";
+
+main.footer-wrapper {
+  footer.main-footer {
+    @include grid(2, 20px);
+    background-color: $dark-lighter;
+    padding: 50px 100px;
+      .left-side {
+        @include grid(2,50px);
+       
+        .footer-links {
+          @include grid(2, 50px);
+          grid-template-columns: 1fr 4fr;
+      
+          a {
+            font-size: 0.8em;
+            display: block;
+            color: #6c6c6c;
+            &:hover {
+              color: $warning;
+            }
+          }
+        }
+      }
+    .footer-social-media {
+      text-align: right;
+      @include flex(row, flex-end, flex-start);
+      span {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(0, 0, 0, 0.5);
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 20px;
+        display: inline-block;
+        @include flex(row, center, center);
+        cursor: pointer;
+        transition: 0.2s;
+        svg {
+          width: 1.6em;
+          height: 1.6em;
+        }
+       
+        &:hover .facebook {
+          color : blue;
+        }
+        &:hover .instagram{
+          color: magenta;
+        }
+        &:hover .twitter {
+          color: cyan;
+        }
+      }
+    }
+  }
+  .last-footer-part {
+    padding: 50px 100px;
+    h2 {
+      margin-bottom: 40px;
+      
+    }
+    p{
+      margin-bottom: 20px;
+     
+      width: 70%;
+      
+    }
+  }
+}
+
+
+@media (max-width: $xx-large-screen) {
+  main.footer-wrapper  {
+    
+    .main-footer {
+      padding: 37px 75px ;
+    }
+   
+  }
+}
+@media (max-width: $x-large-screen) {
+  main.footer-wrapper  {
+    
+    .main-footer {
+      padding: 25px 50px  ;
+    }
+    .last-footer-part {
+      padding: 25px 50px ;
+      p {
+        width: 80%;
+      }
+    }
+   
+  }
+
+}
+@media (max-width: $large-screen) {
+  main.footer-wrapper  {
+    
+    .main-footer {
+      padding: 15px 30px  ;
+    }
+    .last-footer-part {
+      padding: 15px 30px ;
+      p {
+        width: 90%;
+      }
+    }
+   
+  }
+}
+@media (max-width: $medium-screen) {
+  main.footer-wrapper  {
+    
+    .main-footer {
+      padding: 10px 20px   ;
+    }
+    .last-footer-part {
+      padding: 10px 20px ;
+      p {
+        width: 90%;
+      }
+    }
+   
+  }
+}
+
+@media (max-width: $small-screen) {
+  main.footer-wrapper {
+    footer.main-footer {
+        padding: 50px 10px;
+
+        .left-side {
+            grid-template-columns: 1fr;
+
+            .footer-links {
+                position: relative;
+                left: 100px;
+            }
+        }
+
+        .footer-social-media {
+            span {
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .last-footer-part {
+        padding: 50px 10px;
+
+        p {
+            width: 100%;
+        }
+    }
+}
+}

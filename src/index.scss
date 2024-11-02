@@ -1,0 +1,42 @@
+@use "./assets/style/resets";
+@import "./assets/style/settings";
+
+body {
+  background-color: $dark;
+  color: $light;
+}
+
+p {
+  color: $text-color;
+}
+
+a,
+button,
+input {
+  border: none;
+  outline: none;
+  display: inline-block;
+  padding: 10px 20px;
+  color: $light;
+  text-decoration: none;
+}
+.warning-btn {
+    background-color: $warning-t;
+    box-shadow: 0 1px 10px $warning, -0px -1px 10px $warning;
+    border: 2px solid $warning;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 1px 1px 15px $warning, -1px -1px 15px $warning;
+    }
+
+    &:active {
+        transform: scale(0.8);
+    }
+}
+
+.toast-wrapper {
+  position: relative;
+  z-index: 9999;
+
+}

@@ -1,0 +1,38 @@
+@import "../../assets/style/settings";
+
+.team-page-wrapper {
+  padding: 50px 100px;
+
+  .text-wrapper {
+    max-width: 940px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    line-height: 1.5em;
+    font-size: 1.1em;
+  }
+  .all-members-wrapper {
+    @include flex(row, space-evenly, center);
+    flex-wrap: wrap;
+    margin: 100px 0;
+
+    .member-wrapper {
+      text-align: center;
+      img {
+        width: 210px;
+        height: 210px;
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  .section {
+    h2 {
+      display: inline-block;
+      margin-right: 50px;
+      font-size: 40px;
+      font-weight: normal;
+      color: gray;
+      margin-top: 50px;
+    }
+  }
+}

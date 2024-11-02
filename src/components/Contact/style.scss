@@ -1,0 +1,111 @@
+    @import '../../assets//style/settings';
+
+
+.contact-wrapper {
+    padding: 50px 100px;
+    background-color: $dark-lighter;
+    .row {
+        margin-top: 50px;
+        @include grid (2,20px);
+        grid-template-columns: 2fr 1fr;
+    }
+   
+   
+    .left {
+   @include flex (column, $gap: 15px);
+
+   .info {
+    margin-top: 30px;
+    p{
+        color: lightgray;
+        font-size: 1.3em;
+        line-height: 1.4em;
+        width: 80%;
+    }
+   }
+    }
+    .right {
+        width: 700px;
+        form {
+          @include flex();
+           flex-direction: column;
+           gap: 12px;
+           width: 100%;
+            .form-control {
+                width: 80%;
+                input{
+                    padding: 20px;
+                    width: 100%;
+                    background-color: $dark;
+                    display: block; 
+                    border: 2px solid transparent;
+                   
+                    color: snow;  
+                    font-size: 1.2em;
+                    border: none;
+                   
+                    &:hover {
+                        border:  1px solid $warning;
+                    }
+                    &:focus {
+                        border-color: $warning;
+                        background-color: $warning-t;
+                        box-shadow: 0 0 5px $warning;
+                       
+                        &::placeholder {
+                            color: $light;
+    
+                        } 
+                    }    
+                    &:invalid {
+                        background-color: $danger;
+                    }   
+                    &.phone-input {
+                        padding: 27px 42px ;
+                    }   
+                }
+
+                button {
+                    width: 100%;
+                    padding: 12px 20px;
+                    font-size: 1.2em;
+
+                         button:hover {
+                        background-color: red;
+                    }
+                }
+                 div{
+                    .flag-dropdown {
+                        background-color: $dark;
+                        border: 1px solid transparent;
+                        &.open{
+                            ul.country-list {
+                                li.country {
+                                    span.country-name{
+                                        color: $dark;
+                                      
+                                    }
+                                }
+                            }
+                        }
+                   
+                     }
+                 }
+                
+               
+               
+            }
+        }
+    }
+    .maps {
+        margin-top: 100px;
+        @include flex();
+        gap: 30px;
+        .item {
+            .heading-wrapper {
+                margin-bottom: 20px;
+            }
+        }
+       
+    }
+}

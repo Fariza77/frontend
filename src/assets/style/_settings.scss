@@ -1,0 +1,61 @@
+$warning: #ff6600;
+$warning-t: #ff660030;
+
+$consultation-bg: #0a0a0a;
+$dark: #141414;
+$dark-lighter: #1c1c1c;
+
+$light: #ffffff;
+$text-color: #6c6c6c;
+
+$success: #00ff0030;
+$danger: #ff000030;
+
+$xx-large-screen: 1600px;
+$x-large-screen: 1350px;
+$large-screen: 1100px;
+$medium-screen: 855px;
+$small-screen: 680px;
+
+// @media (max-width: $xx-large-screen) {
+// }
+// @media (max-width: $x-large-screen) {
+// }
+// @media (max-width: $large-screen) {
+// }
+// @media (max-width: $medium-screen) {
+// }
+// @media (max-width: $small-screen) {
+// }
+// ====================================================
+// ====================================================
+// MIXINS
+
+@mixin grid($columns: 12, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: $gap;
+}
+
+// USAGE:
+// @include grid();
+// @include grid(3, 10px);
+
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $gap: 10px
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin textShadow() {
+  text-shadow: 1px 1px 1px $warning, -1px -1px 1px $warning;
+}
+// USAGE:
+// @include flex();
+// @include flex(column, center, center);

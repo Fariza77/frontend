@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "qweqweqwe",
+      "role": "admin",
+      "image": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "1730340164503",
+      "author": {
+        "username": "Sophia",
+        "password": "sopgia23"
+      },
+      "date": "10/30/2024",
+      "title": "Global Warming",
+      "image": "",
+      "subtitle1": "Content",
+      "subtitle2": "addtional information"
+    },
+    {
+      "id": "1730340175341",
+      "author": {
+        "username": "Sophia",
+        "password": "sopgia23"
+      },
+      "date": "10/30/2024",
+      "title": "dvdfbs",
+      "image": "",
+      "subtitle1": "bdfb",
+      "subtitle2": "dfbfdbfd"
+    },
+    {
+      "author": {
+        "username": "Sophia",
+        "password": "sopgia23"
+      },
+      "date": "10/31/2024",
+      "title": "blog title updated",
+      "image": "",
+      "subtitle1": "mhjmhjcontent upfdated",
+      "subtitle2": "information updated",
+      "id": "1730340499424"
+    },
+    {
+      "author": {
+        "username": "Sophia",
+        "password": "sophia23"
+      },
+      "date": "10/31/2024",
+      "title": "title",
+      "image": "",
+      "subtitle1": "content",
+      "subtitle2": "info",
+      "id": "1730374713872"
+    }
+  ]
+}

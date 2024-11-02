@@ -1,0 +1,115 @@
+@import "../../assets/style/settings";
+
+.blog-create-form-page {
+  label {
+    display: block;
+    font-family: sans-serif;
+    margin-bottom: 2px;
+  }
+  button.back-btn {
+    position: relative;
+    bottom: 50px;
+}
+  .intro {
+    margin: 10px 0;
+    padding: 10px 0;
+
+    span {
+      @include textShadow();
+      margin-left: 10px;
+      display: inline-block;
+      font-size: 16px;
+      text-decoration: underline dotted 1px $warning;
+    }
+  }
+  form {
+    @include grid(2, 50px);
+    grid-template-columns: 1fr 2fr;
+
+    .form-control {
+      margin: 10px 0;
+
+      * {
+        margin: 5px 0;
+      }
+
+      input,
+      textarea,
+      button {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        outline: none;
+        padding: 10px 20px;
+        border: 2px solid transparent;
+        color: light;
+        background-color: $dark;
+
+        &.error {
+          border: 2px solid red;
+          box-shadow: 1px 1px 10px red, -1px -1px 10px red;
+        }
+        &::placeholder {
+            color: lightgray;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        &:hover:not(.error):not(button),
+        &:focus:not(.error) {
+            border-color: $warning;
+            background-color: $warning-t;
+            box-shadow: 0 0 5px $warning;
+        }
+      }
+      input {
+        padding: 20px;
+      
+      }
+      textarea {
+        height: 120px;
+      }
+      button {
+        float: right;
+        color: snow;
+        background-color: $warning-t;
+        width: 150px;
+        top: 30px;
+
+        &:disabled {
+            background-color: $dark;
+            color: gray;
+            cursor: not-allowed;
+            box-shadow: none;
+
+        }
+        &:hover:not(:disabled) {
+            background-color: $warning;
+        }
+      }
+      .nft-img-wrapper {
+        position: relative;
+        background-color: $dark;
+        width: 100%;
+        @include flex(column, center, center, 0);
+        border-radius: 10px;
+        padding: 5px 0;
+        
+        input[type="file"] {
+            cursor: pointer;
+            height: 20px;
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+        }
+        img {
+            position: relative;
+            top: 8px;
+        }
+        small {
+            color: gray;
+            font-family: sans-serif;
+        }
+      }
+    }
+  }
+}

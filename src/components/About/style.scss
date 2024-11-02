@@ -1,0 +1,132 @@
+@import '../../assets/style/settings';
+
+.about-page-wrapper {
+    padding: 50px 0;
+
+    .heading-wrapper{
+        padding: 0 100px;
+    }
+    .content-wrapper {
+        padding: 0 200px;
+
+        margin: 50px 0;
+        @include grid(2, 50px);
+        grid-template-columns: 1fr 3fr;
+
+        img {
+            filter: grayscale(100%);
+        }
+
+        .info {
+            p {
+                width: 80%;
+                margin-bottom: 30px;
+                font-size: 1.1em;
+                color: lightgray;
+            }
+
+            .warning-btn {
+                padding: 15px 40px;
+                font-size: 1em;
+                @include flex(row, center, center);
+                gap: 10px;
+                box-shadow: 0 0 0 0 ;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+   
+    
+}
+
+@media(max-width: $xx-large-screen) {
+    main.about-page-wrapper {
+        .content-wrapper {
+            padding: 0 150px;
+           
+        }
+    }
+}
+
+
+@media(max-width: $x-large-screen) {
+    main.about-page-wrapper {
+        .heading-wrapper {
+            
+        }
+        .content-wrapper {
+            padding: 0 125px;
+            grid-template-columns: 2fr 3fr;
+            gap: 40px;
+
+            .info {
+                p {
+                    width: 90%;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: $large-screen) {
+    main.about-page-wrapper {
+        .heading-wrapper {
+            
+        }
+        .content-wrapper {
+           padding: 0 75px;
+          }
+    }
+}
+
+
+@media(max-width: $medium-screen) {
+    main.about-page-wrapper {
+        .heading-wrapper {
+            
+        }
+        .content-wrapper {
+           padding: 0 50px;
+           grid-template-columns: 1fr 1.5fr;
+           gap: 30px;
+
+
+           .info {
+            p {
+                width: 100%;
+                
+            }
+        }
+           }
+    }
+}
+
+
+@media(max-width: $small-screen) {
+    main.about-page-wrapper {
+            .content-wrapper {
+                padding: 0 25px;
+                grid-template-columns: 1fr;
+            
+                info {
+                    p {
+                        width: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+//     $xx-large-screen: 1600px;
+// $x-large-screen: 1350px;
+// $large-screen: 1100px;
+// $medium-screen: 855px;
+// $small-screen: 680px;

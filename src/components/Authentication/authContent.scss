@@ -1,0 +1,64 @@
+@import "../../assets/style/settings";
+
+.auth-content-wrapper {
+  form {
+    .form-control {
+      margin-bottom: 20px;
+
+      *{
+        margin: 5px 0;
+      }
+
+      input,
+      button {
+        width: 100%;
+        padding: 15px 20px;
+        text-align: left;
+        background-color: $dark;
+        border: 1px solid transparent;
+        outline: none;
+        color: snow;
+
+        &.error {
+            border: 2px solid red;
+            box-shadow:
+                1px 1px 10px red,
+                -1px -1px 10px red,
+        }
+        &::placeholder {
+            color: darkgray;
+            font-size: 0.8em;
+        }
+      }
+      label {
+        margin-bottom: 2px;
+        font-family: sans-serif;
+        display: block;
+        text-align: left;
+      }
+      button {
+       text-align: center;
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+      p{
+        &.error {
+          font-size: 0.8em;
+          color: red;
+          font-style: italic;
+          text-align: center;
+        }
+      }
+      
+      input {
+        
+        &:focus {
+          border: 1px solid $warning;
+          box-shadow: 1px 1px 0 0 $warning;
+        }
+      }
+      
+    }
+  }
+}
